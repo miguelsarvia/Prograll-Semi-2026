@@ -53,6 +53,11 @@ public class MainActivity extends AppCompatActivity {
             respuesta = num1 / num2;
         }
 
+        opt = findViewById(R.id.optFactorial);
+        if(opt.isChecked()){
+            respuesta = num1 / num2;
+        }
+
         tempVal = findViewById(R.id.lblRespuesta);
         tempVal.setText("Respuesta: "+ respuesta);
     }
