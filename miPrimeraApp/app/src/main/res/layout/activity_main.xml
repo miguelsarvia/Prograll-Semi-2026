@@ -122,7 +122,7 @@
             android:text="Porcentaje" />
 
         <RadioButton
-            android:id="@+id/optExponenciación"
+            android:id="@+id/optExponenciacion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Exponenciación" />
