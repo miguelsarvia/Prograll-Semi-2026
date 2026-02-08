@@ -3,6 +3,7 @@ package com.example.miprimeraapp;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -14,6 +15,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class MainActivity extends AppCompatActivity {
 
     TextView tempVal;
+    RadioGroup radioGroup;
     Button btn;
 
     RadioButton opt;
@@ -35,27 +37,22 @@ public class MainActivity extends AppCompatActivity {
 
         double respuesta = 0;
 
-        opt = findViewById(R.id.optSuma);
-        if(opt.isChecked()){
+        radioGroup = findViewById(R.id.optOpciones);
+        if(radioGroup.getCheckedRadioButtonId()==R.id.optSuma) {
             respuesta = num1 + num2;
         }
-        opt = findViewById(R.id.optResta);
-        if(opt.isChecked()){
+        if(radioGroup.getCheckedRadioButtonId()==R.id.optResta) {
             respuesta = num1 - num2;
         }
-        opt = findViewById(R.id.optMultiplicación);
-        if(opt.isChecked()){
+        if(radioGroup.getCheckedRadioButtonId()==R.id.optMultiplicación) {
             respuesta = num1 * num2;
         }
 
-        opt = findViewById(R.id.optDividir);
-        if(opt.isChecked()){
+        if(radioGroup.getCheckedRadioButtonId()==R.id.optDividir) {
             respuesta = num1 / num2;
         }
 
-        opt = findViewById(R.id.optFactorial);
-
-        if (opt.isChecked()) {
+        if(radioGroup.getCheckedRadioButtonId()==R.id.optFactorial) {
             respuesta = 1;
 
             for (int i = 1; i <= num1; i++) {
@@ -63,19 +60,15 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
-        opt = findViewById(R.id.optPorcentaje);
-        if (opt.isChecked()) {
+        if(radioGroup.getCheckedRadioButtonId()==R.id.optPorcentaje) {
             respuesta = (num1 * num2) / 100;
         }
 
-        opt = findViewById(R.id.optExponenciacion);
-        if (opt.isChecked()) {
+        if(radioGroup.getCheckedRadioButtonId()==R.id.optExponenciacion) {
             respuesta = Math.pow(num1, num2);
         }
 
-        opt = findViewById(R.id.optRaiz);
-
-        if (opt.isChecked()) {
+        if(radioGroup.getCheckedRadioButtonId()==R.id.optRaiz) {
             respuesta = Math.sqrt(num1);
         }
 
