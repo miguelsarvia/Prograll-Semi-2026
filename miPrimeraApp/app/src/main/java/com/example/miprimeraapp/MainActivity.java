@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -15,10 +16,8 @@ import androidx.core.view.WindowInsetsCompat;
 public class MainActivity extends AppCompatActivity {
 
     TextView tempVal;
-    RadioGroup radioGroup;
+    Spinner spn;
     Button btn;
-
-    RadioButton opt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,43 +36,40 @@ public class MainActivity extends AppCompatActivity {
 
         double respuesta = 0;
 
-        radioGroup = findViewById(R.id.optOpciones);
-        if(radioGroup.getCheckedRadioButtonId()==R.id.optSuma) {
-            respuesta = num1 + num2;
-        }
-        if(radioGroup.getCheckedRadioButtonId()==R.id.optResta) {
-            respuesta = num1 - num2;
-        }
-        if(radioGroup.getCheckedRadioButtonId()==R.id.optMultiplicación) {
-            respuesta = num1 * num2;
-        }
+        spn = findViewById(R.id.cboOpciones);
+        switch (spn.getSelectedItemPosition()) {
+            case 0: //suma
+                respuesta = num1 + num2;
+                break;
+            case 1: //Resta
+                respuesta = num1 - num2;
+                break;
+            case 2: //Multiplicacion
+                respuesta = num1 * num2;
+                break;
+            case 3: //division
+                respuesta = num1 / num2;
+                break;
+            case 4: //factorial
+                respuesta = 1;
 
-        if(radioGroup.getCheckedRadioButtonId()==R.id.optDividir) {
-            respuesta = num1 / num2;
+                for (int i = 1; i <= num1; i++) {
+                    respuesta *= i;
+                }
+                break;
+            case 5: //porcentaje
+                respuesta = (num1 * num2) / 100;
+                break;
+            case 6: //exponenciacion
+                respuesta = Math.pow(num1, num2);
+                break;
+            case 7: //raiz
+                respuesta = Math.sqrt(num1);
+                break;
         }
-
-        if(radioGroup.getCheckedRadioButtonId()==R.id.optFactorial) {
-            respuesta = 1;
-
-            for (int i = 1; i <= num1; i++) {
-                respuesta *= i;
-            }
-        }
-
-        if(radioGroup.getCheckedRadioButtonId()==R.id.optPorcentaje) {
-            respuesta = (num1 * num2) / 100;
-        }
-
-        if(radioGroup.getCheckedRadioButtonId()==R.id.optExponenciacion) {
-            respuesta = Math.pow(num1, num2);
-        }
-
-        if(radioGroup.getCheckedRadioButtonId()==R.id.optRaiz) {
-            respuesta = Math.sqrt(num1);
-        }
-
         tempVal = findViewById(R.id.lblRespuesta);
         tempVal.setText("Respuesta: "+ respuesta);
     }
 
 }
+
