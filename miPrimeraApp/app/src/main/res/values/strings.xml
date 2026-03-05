@@ -1,3 +1,14 @@
 <resources>
-    <string name="app_name">Sensores</string>
+    <string name="app_name">Longitudes</string>
+    <string-array name="area">
+        <item>Pie Cuadrado</item>
+        <item>Vara Cuadrada</item>
+        <item>Yarda Cuadrada</item>
+        <item>Metro Cuadrado</item>
+        <item>Tarea</item>
+        <item>Manzana</item>
+        <item>Hectárea</item>
+    </string-array>
+
+
 </resources>
