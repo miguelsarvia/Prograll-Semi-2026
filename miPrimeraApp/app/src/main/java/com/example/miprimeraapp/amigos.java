@@ -1,5 +1,4 @@
 package com.example.miprimeraapp;
-
 public class amigos {
     String idAmigo;
     String nombre;
