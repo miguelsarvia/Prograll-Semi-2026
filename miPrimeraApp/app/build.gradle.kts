@@ -1,21 +1,32 @@
 plugins {
     alias(libs.plugins.android.application)
+    id("com.google.gms.google-services")
 }
 
 android {
-    namespace = "com.example.miprimeraapp"
-    compileSdk {
-        version = release(36)
-    }
+    namespace = "com.ugb.miprimeraapp"
+    compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.example.miprimeraapp"
+        applicationId = "com.ugb.miprimeraapp"
         minSdk = 23
-        targetSdk = 36
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    packaging {
+        resources {
+            excludes += setOf(
+                "META-INF/DEPENDENCIES",
+                "META-INF/LICENSE",
+                "META-INF/LICENSE.txt",
+                "META-INF/NOTICE",
+                "META-INF/NOTICE.txt"
+            )
+        }
     }
 
     buildTypes {
@@ -38,7 +49,22 @@ dependencies {
     implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)
-    testImplementation(libs.junit)
+    implementation("androidx.appcompat:appcompat:1.7.1")
+    implementation("com.google.android.material:material:1.13.0")
+    implementation("androidx.activity:activity:1.13.0")
+    implementation("androidx.constraintlayout:constraintlayout:2.2.1")
+    implementation("com.google.firebase:firebase-database:22.0.1")
+    implementation("com.google.firebase:firebase-messaging:25.0.2")
+    implementation("com.google.firebase:firebase-storage:22.0.1")
+    implementation("androidx.localbroadcastmanager:localbroadcastmanager:1.1.0")
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+
+    implementation(platform("com.google.firebase:firebase-bom:34.13.0"))
+    implementation(platform("com.google.firebase:firebase-database"))
+    implementation(platform("com.google.firebase:firebase-messaging"))
+    implementation(platform("com.google.firebase:firebase-storage"))
+    implementation("com.firebaseui:firebase-ui-storage:9.0.0")
+    implementation("com.google.auth:google-auth-library-oauth2-http:1.19.0")
+    implementation("androidx.localbroadcastmanager:localbroadcastmanager:1.1.0")
 }
