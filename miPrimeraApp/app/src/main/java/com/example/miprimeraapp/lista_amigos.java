@@ -23,6 +23,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.messaging.FirebaseMessaging;
+import com.ugb.miprimeraapp.R;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -52,7 +53,25 @@ public class lista_amigos extends Activity {
 
         listarDatos();
         buscarAmigos();
+        mostrarChats();
+    }
+    private void mostrarChats(){
+        ltsAmigos.setOnItemClickListener( (parent, view, position, id)->{
+            try{
+                Bundle parametros = new Bundle();
+                parametros.putString("nombre", jsonArray.getJSONObject(position).getString("nombre"));
+                parametros.putString("to", jsonArray.getJSONObject(position).getString("to"));
+                parametros.putString("from", jsonArray.getJSONObject(position).getString("from"));
+                parametros.putString("urlFoto", jsonArray.getJSONObject(position).getString("urlFoto"));
+                parametros.putString("urlCompletaFotoFirestore", jsonArray.getJSONObject(position).getString("urlCompletaFotoFirestore"));
 
+                Intent intent = new Intent(getApplicationContext(), chats.class);
+                intent.putExtras(parametros);
+                startActivity(intent);
+            }catch (Exception e){
+                mostrarMsg("Error al abrir el chat: " + e.getMessage());
+            }
+        });
     }
     private void listarDatos(){
         try{
