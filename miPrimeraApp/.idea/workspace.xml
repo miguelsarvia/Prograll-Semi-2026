@@ -31,19 +31,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64d9659f-7b3c-428f-8761-e641086641b8" name="Changes" comment="Aplicacion de mensajeria terminada!!!!">
-      <change afterPath="$PROJECT_DIR$/../.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/Prograll-Semi-2026.git.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/caches/deviceStreaming.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/deviceManager.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/markdown.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../miPrimeraApp.zip" afterDir="false" />
-    </list>
+    <list default="true" id="64d9659f-7b3c-428f-8761-e641086641b8" name="Changes" comment="prueba" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -214,13 +202,30 @@
       <option name="project" value="LOCAL" />
       <updated>1780697848090</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="prueba">
+      <option name="closed" value="true" />
+      <created>1780705003221</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1780705003221</updated>
+    </task>
+    <task id="LOCAL-00004" summary="prueba">
+      <option name="closed" value="true" />
+      <created>1780705657425</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1780705657425</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Creacion de los elementos visuales del chats!!!!" />
     <MESSAGE value="Aplicacion de mensajeria terminada!!!!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Aplicacion de mensajeria terminada!!!!" />
+    <MESSAGE value="prueba" />
+    <option name="LAST_COMMIT_MESSAGE" value="prueba" />
   </component>
   <component name="play_dynamic_filters_status">
     <option name="appIdToCheckInfo">
